@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'pascalprecht.translate', 'starter.controllers'])
+angular.module('starter', ['ionic', 'pascalprecht.translate', 'starter.controllers', 'leaflet-directive'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -42,7 +42,8 @@ angular.module('starter', ['ionic', 'pascalprecht.translate', 'starter.controlle
     url: "/map",
     views: {
       'menuContent': {
-        templateUrl: "templates/map.html"
+        templateUrl: "templates/map.html",
+        controller: 'MapCtrl',
       }
     }
   })
@@ -51,19 +52,21 @@ angular.module('starter', ['ionic', 'pascalprecht.translate', 'starter.controlle
     url: "/browse",
     views: {
       'menuContent': {
-        templateUrl: "templates/browse.html"
+        templateUrl: "templates/browse.html",
       }
     }
   })
-    .state('app.details', {
-      url: "/details",
-      views: {
-        'menuContent': {
-          templateUrl: "templates/details.html",
-          //controller: 'PlaylistsCtrl'
-        }
+
+  .state('app.details', {
+    url: "/details",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/details.html",
+        //controller: 'PlaylistsCtrl'
       }
-    });
+    }
+  })
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/browse');
 });

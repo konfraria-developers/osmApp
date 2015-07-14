@@ -1,0 +1,14 @@
+{
+  "SHOPS": {
+    "name": "SHOPS",
+    "visible": false
+  },
+  "RESTAURANTS": {
+    "name": "RESTAURANTS",
+    "visible": false
+  },
+  "OTHER": {
+    "name": "OTHER",
+    "visible": false
+  }
+}

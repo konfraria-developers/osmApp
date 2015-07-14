@@ -53,6 +53,7 @@ angular.module('starter', ['ionic', 'pascalprecht.translate', 'starter.controlle
     views: {
       'menuContent': {
         templateUrl: "templates/browse.html",
+        controller: "BrowserController"
       }
     }
   })

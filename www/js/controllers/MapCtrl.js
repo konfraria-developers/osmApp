@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers')
 
 .controller('MapCtrl', [ '$scope', function($scope) {
   $scope.map = {

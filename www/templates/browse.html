@@ -1,5 +1,17 @@
 <ion-view view-title="browse">
   <ion-content>
     <h1>Browse</h1>
+    <div class="list card">
+      <a href="#" class="item item-icon-left" ng-repeat="category in categories" >
+        <i class="icon ion-home" ng-click="invert(category)"></i>
+        {{ category.name }}
+        <div class="item item-body" ng-show="category.visible" >
+          <ul class="list">
+            <li ng-repeat="element in data">{{ element.tags.name }}</li>
+          </ul>
+        </div>
+      </a>
+      
+    </div>
   </ion-content>
 </ion-view>

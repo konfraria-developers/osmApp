@@ -4,7 +4,7 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers'])
+angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers', 'leaflet-directive'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -32,42 +32,36 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers'])
     controller: 'AppCtrl'
   })
 
-  .state('app.search', {
-    url: '/search',
+  .state('app.map', {
+    url: "/map",
     views: {
-      'search-tab': {
-        templateUrl: 'templates/search.html'
+      'map-tab': {
+        templateUrl: "templates/map.html",
+        controller: 'MapController',
       }
     }
   })
 
   .state('app.browse', {
-      url: '/browse',
-      views: {
-        'browse-tab': {
-          templateUrl: 'templates/browse.html'
-        }
-      }
-    })
-    .state('app.playlists', {
-      url: '/playlists',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
-        }
-      }
-    })
-
-  .state('app.single', {
-    url: '/playlists/:playlistId',
+    url: '/browse',
     views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+      'browse-tab': {
+        templateUrl: 'templates/browse.html',
+        controller: "BrowserController"
       }
     }
-  });
+  })
+
+  .state('app.details', {
+    url: '/details',
+    views: {
+      'details-tab': {
+        templateUrl: 'templates/details.html'
+      }
+    }
+  })
+
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/search');
+  $urlRouterProvider.otherwise('/app/browse');
+
 });

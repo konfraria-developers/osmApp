@@ -2,7 +2,7 @@
 
   <ion-side-menu-content>
 
-    <ion-nav-bar class="bar-stable">
+    <ion-nav-bar class="bar-assertive">
 
       <ion-nav-back-button>
       </ion-nav-back-button>
@@ -14,17 +14,20 @@
 
     </ion-nav-bar>
 
-    <ion-tabs class="tabs-positive tabs-icon-only tabs-top">
-      <ion-tab title="Local Deals" icon="ion-home" ui-sref="app.search">
-        <ion-nav-view name="search-tab"></ion-nav-view>
-      </ion-tab>
-      <ion-tab title="Saved Searches" icon="ion-star" ui-sref="app.browse">
+    <ion-tabs class="tabs-striped tabs-assertive tabs-icon-only tabs-top">
+      <ion-tab title="Saved Searches" icon="ion-earth" ui-sref="app.browse">
         <ion-nav-view name="browse-tab"></ion-nav-view>
+      </ion-tab>
+      <ion-tab title="Local Deals" icon="ion-gear-a" ui-sref="app.details">
+        <ion-nav-view name="details-tab"></ion-nav-view>
+      </ion-tab>
+      <ion-tab title="OSM map" icon="ion-map" ui-sref="app.map">
+        <ion-nav-view name="map-tab"></ion-nav-view>
       </ion-tab>
     </ion-tabs>
 
     <button id="fab" class="button button-positive button-fab button-fab-bottom-right">
-      <i class="icon ion-social-twitter"></i>
+      <i class="icon ion-social-buffer"></i>
     </button>
 
     <ion-nav-view name="menuContent"></ion-nav-view>
@@ -40,17 +43,14 @@
     </ion-header-bar>
     <ion-content class="stable-bg has-expanded-header">
       <ion-list>
-        <ion-item menu-close ng-click="login()">
-          Login
-        </ion-item>
-        <ion-item menu-close href="#/app/search">
-          Search
-        </ion-item>
         <ion-item menu-close href="#/app/browse">
           Browse
         </ion-item>
-        <ion-item menu-close href="#/app/playlists">
-          Playlists
+        <ion-item menu-close href="#/app/details">
+          Details
+        </ion-item>
+        <ion-item menu-close href="#/app/map">
+          Map
         </ion-item>
       </ion-list>
     </ion-content>

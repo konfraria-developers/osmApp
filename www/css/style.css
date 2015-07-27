@@ -10,3 +10,11 @@
 .menu.menu-left * {
     font-weight: bold;
 }
+
+
+/* Map */
+
+.angular-leaflet-map {
+   width: 100%;
+   height: 640px;
+}

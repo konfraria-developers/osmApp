@@ -1,7 +1,7 @@
 <ion-view view-title="Browse">
   <ion-content>
     <div class="list condensed-space no-padding">
-      <div class="card dark-bg" ng-repeat="category in categories">
+      <div class="card dark-bg" ng-repeat="category in categories" ui-sref="app.details">
         <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" >
           <h2> {{ category.name }} </h2>
           <p> {{ category.info }} </p>

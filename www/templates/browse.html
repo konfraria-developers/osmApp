@@ -1,8 +1,15 @@
-<ion-view view-title="browse">
+<ion-view view-title="Browse">
   <ion-content>
-    <h1>Browse</h1>
-    <div class="list card">
-      <a href="#" class="item item-icon-left" ng-repeat="category in categories" >
+    <div class="list condensed-space no-padding">
+      <div class="card dark-bg" ng-repeat="category in categories">
+        <a class="item clear-bg item-bg-image waves-effect waves-button waves-light has-mask-reverse" >
+          <h2> {{ category.name }} </h2>
+          <p> {{ category.info }} </p>
+          <img src="{{ category.image }}">
+        </a>
+      </div>
+      <!--
+      <div href="#" class="item item-icon-left" ng-repeat="category in categories" >
         <i class="icon ion-home" ng-click="invert(category)"></i>
         {{ category.name }}
         <div class="item item-body" ng-show="category.visible" >
@@ -10,7 +17,7 @@
             <li ng-repeat="element in data">{{ element.tags.name }}</li>
           </ul>
         </div>
-      </a>
+      </div>-->
 
     </div>
   </ion-content>

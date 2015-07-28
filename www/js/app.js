@@ -29,7 +29,7 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers', 'le
     url: '/app',
     abstract: true,
     templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
+    controller: 'AppController'
   })
 
   .state('app.map', {

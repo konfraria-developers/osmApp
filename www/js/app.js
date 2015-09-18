@@ -22,6 +22,16 @@ angular.module('starter', ['ionic', 'ionic-material', 'starter.controllers', 'le
   });
 })
 
+.config(['$translateProvider', function($translateProvider) {
+  $translateProvider.useStaticFilesLoader({
+    prefix: 'translations/locale-',
+    suffix: '.json'
+  });
+  $translateProvider.determinePreferredLanguage();
+  $translateProvider.fallbackLanguage(['en']);
+  $translateProvider.useSanitizeValueStrategy('escaped');
+}])
+
 .config(function($stateProvider, $ionicConfigProvider, $urlRouterProvider) {
   $stateProvider
 

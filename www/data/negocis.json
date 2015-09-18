@@ -22,7 +22,7 @@
     "male": "yes",
     "name": "Raül",
     "phone": "+34 936720361",
-    "shop": "hairdresser",
+    
     "wheelchair": "no"
   }
 },
@@ -38,7 +38,7 @@
     "entrance": "yes",
     "name": "Condis",
     "phone": "+34 936720204",
-    "shop": "supermarket",
+    
     "wheelchair": "yes"
   }
 },
@@ -52,7 +52,7 @@
     "addr:street": "Avinguda Catalunya",
     "name": "Travis",
     "phone": "+34 936722783",
-    "shop": "doityourself",
+    
     "wheelchair": "yes"
   }
 },

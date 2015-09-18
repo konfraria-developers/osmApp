@@ -8,7 +8,8 @@ angular.module('starter.controllers', ['starter.data'])
   // listen for the $ionicView.enter event:
   //$scope.$on('$ionicView.enter', function(e) {
   //});
-
+  $scope.MENU = {};
+  $scope.MENU.browseText = 'BROWSE';
   $scope.$watch(
     function () {
       return $ionicSideMenuDelegate.getOpenRatio();

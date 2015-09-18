@@ -1,6 +1,7 @@
  {
   "SHOPS": {
     "name": "Shops",
+    "tag": "shop",
     "info": "Find the shops near you",
     "image": "img/shops.jpg",
     "visible": false

@@ -2,8 +2,8 @@
 
 angular.module('starter.data').
 factory('CATEGORIESAPI', ['$resource', function($resource) {
-	return $resource('/osm-app/data/classes.json',
-			{},
-			{}
-	);
+    return $resource('/home/eriba/software/osmApp/www/data/classes.json',
+            {},
+            {}
+    );
 }]);

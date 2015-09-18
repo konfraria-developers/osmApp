@@ -1,14 +1,20 @@
-{
+ {
   "SHOPS": {
-    "name": "SHOPS",
+    "name": "Shops",
+    "info": "Find the shops near you",
+    "image": "img/shops.jpg",
     "visible": false
   },
   "RESTAURANTS": {
-    "name": "RESTAURANTS",
+    "name": "Restaurants",
+    "info": "Find the restaurants near you",
+    "image": "img/restaurants.jpg",
     "visible": false
   },
   "OTHER": {
-    "name": "OTHER",
+    "name": "Other",
+    "info": "Find random places near you",
+    "image": "img/other.jpg",
     "visible": false
   }
 }

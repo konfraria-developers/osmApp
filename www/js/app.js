@@ -62,6 +62,25 @@ angular.module('starter', ['ionic', 'pascalprecht.translate', 'ionic-material', 
     }
   })
 
+  .state('app.browse.items', {
+    url: "/items",
+    views: {
+      'browse-tab@app': {
+        templateUrl: "templates/items.html",
+        controller: "BrowserItemsController"
+      }
+    }
+  })
+
+  .state('app.browse.items.item', {
+    url: "/item",
+    views: {
+      'browse-tab@app': {
+        templateUrl: "templates/item.html",
+      }
+    }
+  })
+
   .state('app.details', {
     url: '/details',
     views: {

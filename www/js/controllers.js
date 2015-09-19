@@ -10,6 +10,15 @@ angular.module('starter.controllers', ['starter.data'])
   //});
   $scope.MENU = {};
   $scope.MENU.browseText = 'BROWSE';
+  $scope.MENU.showTabs = true;
+
+  $scope.DATA = {};
+  $scope.DATA.categories = null;
+  $scope.DATA.data = null;
+
+  $scope.DATA.selectedCategory = null;
+  $scope.DATA.selectedCItem = null;
+
   $scope.$watch(
     function () {
       return $ionicSideMenuDelegate.getOpenRatio();

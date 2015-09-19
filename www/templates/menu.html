@@ -1,4 +1,4 @@
-<ion-side-menus enable-menu-with-back-views="false">
+<ion-side-menus enable-menu-with-back-views="true">
 
   <!-- Side Menu Content -->
 
@@ -6,11 +6,12 @@
 
     <ion-nav-bar class="bar-assertive no-shadow-bar" align-title="left">
 
-      <ion-nav-back-button>
+      <ion-nav-back-button class="no-text ion-android-arrow-back button-clear">
       </ion-nav-back-button>
 
-      <ion-nav-buttons side="left">
-        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+      <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-android-search"></button>
+        <button class="button button-icon button-clear ion-android-more-vertical" menu-toggle="right">
         </button>
       </ion-nav-buttons>
 
@@ -18,18 +19,18 @@
 
     <!-- Tabs -->
 
-    <ion-tabs class="tabs-striped tabs-assertive tabs-icon-only tabs-top">
+    <ion-tabs ng-show="MENU.showTabs" class="tabs-striped tabs-assertive tabs-icon-only tabs-top">
 
-      <ion-tab title="Saved Searches" icon="ion-earth" ui-sref="app.browse">
+      <ion-tab title="" icon="ion-map" ui-sref="app.map">
+        <ion-nav-view name="map-tab"></ion-nav-view>
+      </ion-tab>
+
+      <ion-tab title="" icon="ion-earth" ui-sref="app.browse">
         <ion-nav-view name="browse-tab"></ion-nav-view>
       </ion-tab>
 
-      <ion-tab title="Local Deals" icon="ion-gear-a" ui-sref="app.details">
+      <ion-tab title="" icon="ion-gear-a" ui-sref="app.details">
         <ion-nav-view name="details-tab"></ion-nav-view>
-      </ion-tab>
-
-      <ion-tab title="OSM map" icon="ion-map" ui-sref="app.map">
-        <ion-nav-view name="map-tab"></ion-nav-view>
       </ion-tab>
 
     </ion-tabs>
@@ -46,28 +47,32 @@
 
   <!-- Side Menu Definition -->
 
-  <ion-side-menu side="left">
+  <ion-side-menu side="right">
 
     <ion-header-bar class="expanded">
       <img src="img/logo.png" class="avatar motion spin fade">
       <div class="menu-bottom">
-          Ionic Material API
+        La Konfraria de la Vila
       </div>
     </ion-header-bar>
 
     <ion-content class="stable-bg has-expanded-header">
       <ion-list>
 
-        <ion-item menu-close href="#/app/browse">
-          {{ 'BROWSE' | translate }}
+        <ion-item menu-close href="">
+          Settings
         </ion-item>
 
-        <ion-item menu-close href="#/app/details">
-          Details
+        <ion-item menu-close href="">
+          About Ionic Material API
         </ion-item>
 
-        <ion-item menu-close href="#/app/map">
-          Map
+        <ion-item menu-close href="">
+          About Konfraria de la Vila
+        </ion-item>
+
+        <ion-item menu-close href="">
+          Licence
         </ion-item>
 
       </ion-list>

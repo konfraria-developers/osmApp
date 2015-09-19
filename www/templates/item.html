@@ -1,0 +1,24 @@
+<ion-view view-title="{{ MENU.browseText | translate }}">
+  <ion-content>
+    <div class="hero has-mask " style="background-image: url('img/login_got.jpg');">
+      <div class="content">
+
+        <button class="button button-large button-clear flat waves-effect waves-button waves-light icon ion-heart pull-right text-white"></button>
+
+        <button class="button button-large button-clear flat waves-effect waves-button waves-light icon ion-images pull-right text-white"></button>
+
+        <a ui-sref="app.map">
+          <button class="button button-large button-clear flat waves-effect waves-button waves-light icon ion-map pull-right text-white"></button>
+        </a>
+
+      </div>
+    </div>
+    <div class="mid-bar dark-bg z1 padding">
+      <h3>{{ DATA.selectedItem.tags.name }}</h3>
+      <p ng-show="DATA.selectedItem.tags.hasOwnProperty('addr:street');">{{ DATA.selectedItem.tags["addr:street"] }}, {{ DATA.selectedItem.tags["addr:housenumber"] }}</p>
+    </div>
+    <div class="content double-padding">
+      <p class="text-muted" ng-show="DATA.selectedItem.tags.hasOwnProperty('phone');" ng-click="toggleItems();">{{ 'Telephone' | translate}}: {{DATA.selectedItem.tags.phone}}</p>
+    </div>
+  </ion-content>
+</ion-view>

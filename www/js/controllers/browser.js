@@ -2,29 +2,37 @@
 
 angular.module('starter.controllers').
 controller('BrowserController', ['$scope', 'OSMAPI', 'CATEGORIESAPI', function($scope, OSMAPI, CATEGORIESAPI) {
-    $scope.categories = CATEGORIESAPI.get();
-    $scope.data = OSMAPI.query();
-    $scope.selectedCategory = null;
-    $scope.selectedItem = null;
+
+    if ( $scope.DATA.categories == null ) {
+      $scope.DATA.categories = CATEGORIESAPI.get();
+    }
+
+    if ( $scope.DATA.data == null ) {
+      $scope.DATA.data = OSMAPI.query();
+    }
+
+    //$scope.selectedCategory = null;
+
     $scope.toggleCategories = function(category) {
-    	if ($scope.selectedCategory == null) {
-    		$scope.selectedCategory = category;
-    		$scope.MENU.browseText = category.name;
-    	} else {
-    		$scope.selectedCategory = null;
-    	}
+      $scope.MENU.browseText = category.name;
+      $scope.DATA.selectedCategory = category;
+      console.log ( $scope.selectedCategory );
     }
-    $scope.toggleItems = function(item) {
-    	if ($scope.selectedItem == null) {
-    		$scope.selectedItem = item;
-    	} else {
-    		$scope.selectedItem = null;
-    	}
+
+}]).
+
+controller('BrowserItemsController', ['$scope', function($scope) {
+
+     $scope.toggleItems = function(item) {
+      $scope.DATA.selectedItem = item;
+      console.log ( $scope.DATA.selectedItem );
     }
+
     $scope.search = function(item) {
-    	if ($scope.selectedCategory != null)
-    	    if (item.tags.hasOwnProperty($scope.selectedCategory.tag))
-    		    return true;
-    	return false;
+      if ($scope.DATA.selectedCategory != null)
+          if (item.tags.hasOwnProperty($scope.DATA.selectedCategory.tag))
+            return true;
+      return false;
     }
 }]);
+

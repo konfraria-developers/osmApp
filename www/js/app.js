@@ -77,6 +77,7 @@ angular.module('starter', ['ionic', 'pascalprecht.translate', 'ionic-material', 
     views: {
       'browse-tab@app': {
         templateUrl: "templates/item.html",
+        controller: 'MapController',
       }
     }
   })

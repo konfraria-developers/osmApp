@@ -17,7 +17,9 @@ controller('BrowserController', ['$scope', 'OSMAPI', 'CATEGORIESAPI', function($
     $scope.toggleCategories = function(category) {
       //$scope.MENU.hideTabs = true;
       $scope.DATA.selectedCategory = category;
-      console.log ( $scope.selectedCategory );
+
+      console.log ( "Selected category: " );
+      console.log ( $scope.DATA.selectedCategory );
     }
 
 }]).
@@ -27,6 +29,8 @@ controller('BrowserCategoryController', ['$scope', function($scope) {
      $scope.toggleItems = function(item) {
       $scope.MENU.browseText = $scope.DATA.selectedCategory.name;
       $scope.DATA.selectedItem = item;
+
+      console.log ( "Selected item: " );
       console.log ( $scope.DATA.selectedItem );
     }
 

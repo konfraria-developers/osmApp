@@ -18,7 +18,7 @@ angular.module('starter.controllers', ['starter.data'])
   $scope.DATA.data = null;
 
   $scope.DATA.selectedCategory = null;
-  $scope.DATA.selectedCItem = null;
+  $scope.DATA.selectedItem = null;
 
   $scope.$watch(
     function () {

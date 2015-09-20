@@ -62,17 +62,17 @@ angular.module('starter', ['ionic', 'pascalprecht.translate', 'ionic-material', 
     }
   })
 
-  .state('app.browse.items', {
-    url: "/items",
+  .state('app.browse.category', {
+    url: "/category",
     views: {
       'browse-tab@app': {
-        templateUrl: "templates/items.html",
-        controller: "BrowserItemsController"
+        templateUrl: "templates/category.html",
+        controller: "BrowserCategoryController"
       }
     }
   })
 
-  .state('app.browse.items.item', {
+  .state('app.browse.category.item', {
     url: "/item",
     views: {
       'browse-tab@app': {

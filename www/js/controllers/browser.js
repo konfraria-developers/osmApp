@@ -11,19 +11,21 @@ controller('BrowserController', ['$scope', 'OSMAPI', 'CATEGORIESAPI', function($
       $scope.DATA.data = OSMAPI.query();
     }
 
+    // It's supposed to be inherited, but nope, it doesn't!
     //$scope.selectedCategory = null;
 
     $scope.toggleCategories = function(category) {
-      $scope.MENU.browseText = category.name;
+      //$scope.MENU.hideTabs = true;
       $scope.DATA.selectedCategory = category;
       console.log ( $scope.selectedCategory );
     }
 
 }]).
 
-controller('BrowserItemsController', ['$scope', function($scope) {
+controller('BrowserCategoryController', ['$scope', function($scope) {
 
      $scope.toggleItems = function(item) {
+      $scope.MENU.browseText = $scope.DATA.selectedCategory.name;
       $scope.DATA.selectedItem = item;
       console.log ( $scope.DATA.selectedItem );
     }

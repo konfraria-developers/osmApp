@@ -9,8 +9,9 @@ angular.module('starter.controllers', ['starter.data'])
   //$scope.$on('$ionicView.enter', function(e) {
   //});
   $scope.MENU = {};
-  $scope.MENU.browseText = 'BROWSE';
-  $scope.MENU.showTabs = true;
+  $scope.MENU.browseText = 'APP_NAME';
+  $scope.MENU.hideTabs = false;
+  $scope.MENU.isExpanded = true;
 
   $scope.DATA = {};
   $scope.DATA.categories = null;

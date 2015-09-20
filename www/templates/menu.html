@@ -19,7 +19,7 @@
 
     <!-- Tabs -->
 
-    <ion-tabs ng-show="MENU.showTabs" class="tabs-striped tabs-assertive tabs-icon-only tabs-top">
+    <ion-tabs ng-hide="" class="tabs-striped tabs-assertive tabs-icon-only tabs-top">
 
       <ion-tab title="" icon="ion-map" ui-sref="app.map">
         <ion-nav-view name="map-tab"></ion-nav-view>
@@ -59,19 +59,19 @@
     <ion-content class="stable-bg has-expanded-header">
       <ion-list>
 
-        <ion-item menu-close href="">
+        <ion-item menu-close ui-sref="app.map">
           Settings
         </ion-item>
 
-        <ion-item menu-close href="">
+        <ion-item menu-close ui-sref="app.map">
           About Ionic Material API
         </ion-item>
 
-        <ion-item menu-close href="">
+        <ion-item menu-close ui-sref="app.map">
           About Konfraria de la Vila
         </ion-item>
 
-        <ion-item menu-close href="">
+        <ion-item menu-close ui-sref="app.map">
           Licence
         </ion-item>
 

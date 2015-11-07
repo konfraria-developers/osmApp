@@ -14,11 +14,11 @@
       </div>
     </div>
     <div class="mid-bar dark-bg z1 padding">
-      <h3>{{ DATA.selectedItem.tags.name }}</h3>
-      <p ng-show="DATA.selectedItem.tags.hasOwnProperty('addr:street');">{{ DATA.selectedItem.tags["addr:street"] }}, {{ DATA.selectedItem.tags["addr:housenumber"] }}</p>
+      <h3>{{ DATA.selectedItem.properties.name }}</h3>
+      <p ng-show="DATA.selectedItem.properties.hasOwnProperty('addr:street');">{{ DATA.selectedItem.properties["addr:street"] }}, {{ DATA.selectedItem.properties["addr:housenumber"] }}</p>
     </div>
     <div class="content double-padding">
-      <p class="text-muted" ng-show="DATA.selectedItem.tags.hasOwnProperty('phone');" ng-click="toggleItems();">{{ 'Telephone' | translate}}: {{DATA.selectedItem.tags.phone}}</p>
+      <p class="text-muted" ng-show="DATA.selectedItem.properties.hasOwnProperty('phone');" ng-click="toggleItems();">{{ 'Telephone' | translate}}: {{DATA.selectedItem.properties.phone}}</p>
     </div>
   </ion-content>
 </ion-view>

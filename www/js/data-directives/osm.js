@@ -2,7 +2,11 @@
 
 angular.module('starter.data', ['ngResource']).
 factory('OSMAPI', ['$resource', function($resource) {
-    return $resource('/home/eriba/software/osmApp/www/data/negocis.json',
+
+    console.log("hi")
+
+    //return $resource('/home/eriba/software/osmApp/www/data/data.json',
+    return $resource('http://192.168.1.48:8080/data/lapalma/data.json',
             {},
             {}
     );

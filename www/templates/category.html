@@ -25,10 +25,10 @@
     </div>
     <h4 class="content padding double-padding-x">List of {{ DATA.selectedCategory.name }}</h4>
     <div class="list animate-fade-slide-in-right">
-      <a ui-sref="app.browse.category.item" class="item item-avatar item-icon-right waves-effect waves-button waves-dark in done" style="transition-delay: 0.51s;" ng-repeat="element in DATA.data | filter:search" ng-click="toggleItems(element);">
+      <a ui-sref="app.browse.category.item" class="item item-avatar item-icon-right waves-effect waves-button waves-dark in done" style="transition-delay: 0.51s;" ng-repeat="element in DATA.data[0].features | filter:search" ng-click="toggleItems(element);">
         <img src="img/logo.png">
-        <h2>{{ element.tags.name }}</h2>
-        <p>{{ element.tags.shop }}</p>
+        <h2>{{ element.properties.name }}</h2>
+        <p>{{ element.properties.shop }}</p>
         <i class="icon ion-chatbubble muted"></i>
       </a>
     </div>

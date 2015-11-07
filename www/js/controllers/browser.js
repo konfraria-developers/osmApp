@@ -8,6 +8,7 @@ controller('BrowserController', ['$scope', 'OSMAPI', 'CATEGORIESAPI', function($
     }
 
     if ( $scope.DATA.data == null ) {
+      //TODO: optimize this code
       $scope.DATA.data = OSMAPI.query();
     }
 
@@ -20,6 +21,7 @@ controller('BrowserController', ['$scope', 'OSMAPI', 'CATEGORIESAPI', function($
 
       console.log ( "Selected category: " );
       console.log ( $scope.DATA.selectedCategory );
+      console.log ( $scope.DATA.data );
     }
 
 }]).
@@ -35,8 +37,9 @@ controller('BrowserCategoryController', ['$scope', function($scope) {
     }
 
     $scope.search = function(item) {
+
       if ($scope.DATA.selectedCategory != null)
-          if (item.tags.hasOwnProperty($scope.DATA.selectedCategory.tag))
+          if (item.properties.hasOwnProperty($scope.DATA.selectedCategory.tag))
             return true;
       return false;
     }
